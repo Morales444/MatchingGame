@@ -1,5 +1,5 @@
 #rightSide {
-    left: 500px;
+    left: 625px;
     border-left: 2px solid black;
 }
 img {
@@ -8,8 +8,21 @@ img {
 div {
     position: absolute;
     height: 500px;
-    width: 500px;
+    width: 625px;
 }
 body {
     background-color: #26851B;
+}
+form {
+    background: rgb(251, 251, 255);
+    padding:1em;
+    border:5px solid #000000;
+    margin:1em;
+    width:25em;
+    alignment: center;
+    text-align: center;
+    border-radius: 15px 50px;
+}
+input {
+    border-radius: 50px 50px 50px 50px;
 }
