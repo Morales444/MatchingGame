@@ -23,6 +23,8 @@ form {
     text-align: center;
     border-radius: 15px 50px;
 }
-input {
+button {
+    height: 20px;
+    width: 80px;
     border-radius: 50px 50px 50px 50px;
 }
