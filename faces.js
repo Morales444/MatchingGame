@@ -33,9 +33,5 @@ function generateFaces() {
         theBody.onclick = null;
         theLeftSide.lastChild.onclick = null;
     };
-    theLeftSide.lastChild.onclick = function nextLevel(event){
-        event.stopPropagation();
-        numberOfFaces += 5;
-        generateFaces();
-    };
+
 }
