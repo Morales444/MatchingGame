@@ -3,20 +3,23 @@
  */
 
 
+
+//625
 function getRand(min, max) {
     return Math.floor((Math.random()*(max-min)))+min;
 }
 var numberOfFaces = 5;
 function generateFaces() {
+    var theRightSide = document.getElementById("rightSide");
+    while (theRightSide.firstChild) {
+        theRightSide.removeChild(theRightSide.firstChild);
+    }
     var theBody = document.getElementsByTagName("body")[0];
     var theLeftSide = document.getElementById("leftSide");
     while (theLeftSide.firstChild) {
         theLeftSide.removeChild(theLeftSide.firstChild);
     }
-    var theRightSide = document.getElementById("rightSide");
-    while (theRightSide.firstChild) {
-        theRightSide.removeChild(theRightSide.firstChild);
-    }
+
     for (var i = 0 ; i < numberOfFaces ; i++) {
 
         var theImg = document.createElement("img");
@@ -33,5 +36,9 @@ function generateFaces() {
         theBody.onclick = null;
         theLeftSide.lastChild.onclick = null;
     };
-
+    theLeftSide.lastChild.onclick = function nextLevel(event){
+        event.stopPropagation();
+        numberOfFaces += 5;
+        generateFaces();
+    };
 }
